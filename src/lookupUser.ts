@@ -1,4 +1,5 @@
 import fetch from "cross-fetch";
+import { appendEntryToJson } from "./appendEntryToJson";
 import { Node } from "./servers";
 
 export function lookupUser(user: string, uri: string, requestId: string) {

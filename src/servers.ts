@@ -10,11 +10,11 @@ export function getNodes() {
 }
 
 export function addNode(node: Node) {
+  console.log(`registering ${node.user}`);
   const isAlreadyAdded = servers.find(
     (existingNode) => existingNode.user === node.user
   );
   if (isAlreadyAdded) return;
-  console.log(`${node.user} registered at uri of ${node.uri}`);
   servers.push(node);
 }
 
